@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { Character } from '../../dbz/interfaces/character.interace';
+
 
 @Component({
-  selector: 'app-heroes-list',
+  selector: 'dbz-list',
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
 export class ListComponent {
 
- public heroeNames: string[] =['Spiderman','Ironman','Hulk','She Hulk', 'Thor'];
- public deletedHero?: string;
-
-
- removeLastHero():void{
-    this.deletedHero = this.heroeNames.pop();
-   }
+@Input()
+ public characterList: Character[] = [{
+   name:'Trunks',
+   power:10
+ }]
 
 }
