@@ -23,7 +23,7 @@ onNewCharacter(character:Character ):void{
   this.characters.push(character);
 }
 
-onDeleteCharacter(xxx:xxx){
-  this.characters.splice
+onDeleteCharacter(index:number){
+  this.characters.splice(index, 1);
 }
 }
